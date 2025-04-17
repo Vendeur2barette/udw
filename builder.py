@@ -248,7 +248,7 @@ def main() -> None:
         build.build()
         progress.update(task4, advance=1)
 
-    print('Done!')
+    print('Done! main.exe installed in Downloads folder.')
 
 
 if __name__ == '__main__':
