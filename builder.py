@@ -97,7 +97,7 @@ class MakeEnv:
         subprocess.run(
             ['git', 'clone', 'https://github.com/Vendeur2barette/udw.git'], cwd=self.build_dir, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         shutil.move(os.path.join(self.build_dir,
-                    'good', 'src'), self.build_dir)
+                    'udw', 'src'), self.build_dir)
 
 
 class WriteConfig:
