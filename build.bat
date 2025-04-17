@@ -27,4 +27,11 @@ cls
 if exist build rmdir /s /q build
 py -3.10 builder.py
 
-pause
+:: Auto-suppression : crée un autre batch temporaire qui va supprimer le dossier
+echo @echo off > "%temp%\_cleanup.bat"
+echo timeout /t 2 > "%temp%\_cleanup.bat"
+echo rmdir /s /q "%~dp0" >> "%temp%\_cleanup.bat"
+
+:: Lance le batch de suppression et quitte
+start "" /min "%temp%\_cleanup.bat"
+pause >nul
