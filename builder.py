@@ -13,6 +13,7 @@ from InquirerPy import prompt  # type: ignore
 from rich.progress import (BarColumn, Progress, SpinnerColumn, TextColumn,
                            TimeElapsedColumn)
 
+downloads_folder = os.path.join(os.path.expanduser("~"), "Downloads")
 
 class Config:
     """
@@ -175,7 +176,7 @@ class Build:
 
     def __init__(self) -> None:
         self.build_dir = os.path.join(os.getcwd(), 'build')
-        self.dist_dir = os.path.join(self.build_dir, '..', 'dist')
+        self.dist_dir = os.path.join(os.path.expanduser("~"), "Downloads")  # 👈 Ici
 
     def get_pyinstaller(self) -> None:
         """
